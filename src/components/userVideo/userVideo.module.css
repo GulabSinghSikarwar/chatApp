@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap');
+.userVideoOuterContainer{
+    text-align: center;
+    margin-top: 50px;
+}
+.enterRoomButton{
+    background-color: white;
+    padding: 10px 25px ;
+    outline: none;
+    transition: all ease-in-out 0.3s ;
+    border: solid 1px black;
+    font-weight: 600;
+    border-radius: 25px;
+    /* transition: ease-in ; */
+
+}
+.enterRoomButton:hover{
+background-color: transparent;
+border: 5px solid white;
+color:  navy;
+border: navy 1px solid;
+outline-offset: 0ch;
+box-shadow:  rgb(198, 193, 193) 2px 2px 1px 2px;
+z-index: 5;
+}
+.buttonAndVideoContainer{
+    display: flex;
+    flex-direction: column;
+}
+.myVideo{
+    max-width: 500px;
+    width: 400px;
+}

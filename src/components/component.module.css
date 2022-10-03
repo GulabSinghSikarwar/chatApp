@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&display=swap');
+.box{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+}
+.window {
+    /* text-align: center; */
+    margin-top: 100px;
+    display: flex;
+    width: 80%;
+
+   
+    margin-top: 180px;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    /* margin: auto; */
+    
+    /* padding: auto; */
+    /* width: 50%; */
+    border-radius: 15px;
+    padding-bottom: 30px;
+    box-shadow: grey 2px 2px 2px 2px;
+
+
+}
+
+.windowHeading {
+    /* border: solid navy 1px; */
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    /* background-color: black; */
+    background-color: #5DA3FA;
+    margin-top: 100px;
+    border-radius: 5px;
+    /* font-family: 'Indie Flower', cursive; */
+
+
+}
+
+.windowHeading h4 {
+    margin: 0px;
+    padding: 10px 25px;
+    font-size: 30px;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    /* width: 50%; */
+
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background-color: white;
+
+    
+
+
+
+}
+
+.inputContainer input {
+    padding: 20px 50px;
+    /* font-size: ; */
+
+    /* width: 70%; */
+    /* width: 200px; */
+    /* font-size: 18px !important ; */
+    outline: none;
+    border: none;
+    font-size: 25px;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Indie Flower', cursive;
+
+
+}
+
+.enterRoomButtonContainer {
+    /* background-color: black; */
+    background-color: #50DBB4;
+    padding: 10px 25px;
+    /* border-radius: 5; */
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-radius: 5px;
+    text-align: center;
+    color: navy;
+    font-size: 30px;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Quicksand', sans-serif;   
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}

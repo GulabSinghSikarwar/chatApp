@@ -1,23 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
+import { io } from 'socket.io-client'
+import RoomDetail from './components/roomDetail';
+import { useRef } from 'react';
+import { setSocket } from './components/stateManagement/slices/socketSlice'
+import { useDispatch } from 'react-redux'
+import UserRoutes from './routes/routes';
+// import { getDefaultMiddleware} from '@reduxjs/toolkit'
+let  socket = io.connect('http://localhost:5000/')
 function App() {
+  // const customizedMiddleware =getDefaultMiddleware({
+  //   serializableCheck:false
+  // })
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // console.log(socket);
+    dispatch(setSocket(socket))
+
+    console.log("effect");
+  }, [])
+  console.log("after");
+
+  // }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body' >
+      
+      <UserRoutes/>
+      {/* {stream &&  <video playsInline muted ref={video} autoPlay style={{ width: "300px" }} />} */}
+
     </div>
   );
 }
