@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './component.module.css'
-import UserVideo from './userVideo/userVideo'
-import {useParams,useLocation} from 'react-router-dom'
+import RoomJoinButtonAction from './userVideo/userVideo'
+import { useParams, useLocation } from 'react-router-dom'
 
 
 function RoomDetail() {
@@ -14,18 +14,17 @@ function RoomDetail() {
     setEnteredRoom(true)
 
   }
+
+
+  //  setting the room name 
   const enteredRoomDetailsChangeHandeler = (event) => {
     setEnteredRoomDetails(event.target.value)
 
   }
-  const params =useParams();
-  const location=useLocation()
 
- console.log(params.pathname); 
- const path=location.pathname;
- console.log("current path : ",path);
 
- return (
+
+  return (
     <div className={styles.box}>
       <div className={styles.window}>
         {/*
@@ -57,8 +56,9 @@ function RoomDetail() {
             :
             (<></>)
         }
-        
-        <UserVideo enteredRoomDetails={enteredRoomDetails} enteredRoom={enteredRoom} enteredRoomChangeHandeler={enteredRoomChangeHandeler} />
+
+        {/*  this will  get the room details and  will redirect to the  joining  meet link  */}
+        <RoomJoinButtonAction enteredRoomDetails={enteredRoomDetails} enteredRoom={enteredRoom} enteredRoomChangeHandeler={enteredRoomChangeHandeler} />
 
       </div>
     </div>

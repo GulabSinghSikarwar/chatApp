@@ -11,9 +11,7 @@ import UserRoutes from './routes/routes';
 // import { getDefaultMiddleware} from '@reduxjs/toolkit'
 let  socket = io.connect('http://localhost:5000/')
 function App() {
-  // const customizedMiddleware =getDefaultMiddleware({
-  //   serializableCheck:false
-  // })
+ 
 
   const dispatch = useDispatch();
 
