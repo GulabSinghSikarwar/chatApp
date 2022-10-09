@@ -7,10 +7,10 @@ function UserMediaContainer() {
     const userMedia = useRef()
     useEffect(() => {
 
-        // if(!stream)
-        // userMedia.current={srcObject:null}
+        if(!stream)
+        userMedia.current={srcObject:null}
 
-        // else{
+        else{
 
             navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((stream) => {
                 setStream(stream);
@@ -22,14 +22,14 @@ function UserMediaContainer() {
                 console.log("some error in fetching user : ", error.message);
                 
             })
-        // }
+        }
 
 
     }, [stream])
 
     return (
         <div>
-                { stream && <video className={styles.myVideo} muted ref={userMedia} autoPlay />}
+                { stream && <video className={styles.myVideo}  muted ref={userMedia} autoPlay />}
 
       
         </div>
