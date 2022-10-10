@@ -30,6 +30,9 @@ function RoomJoinButtonAction({ enteredRoomDetails, enteredRoom, enteredRoomChan
             return;
 
         }
+        enteredRoomChangeHandeler()
+
+        console.log("path: ",path);
         const newPath=`${path}/meet/${enteredRoomDetails}`
 
         navigate(newPath)

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './component.module.css'
 import RoomJoinButtonAction from './userVideo/userVideo'
 import { useParams, useLocation } from 'react-router-dom'
-
+import { Routes, Route, } from 'react-router-dom'
+import MeetingMainContainer from './Screens/MeetingMainContainer/MeetingMainContainer'
 
 function RoomDetail() {
 
@@ -10,7 +11,11 @@ function RoomDetail() {
 
   const [enteredRoomDetails, setEnteredRoomDetails] = useState("")
 
+
+
+
   const enteredRoomChangeHandeler = () => {
+    console.log(" entered boolean change called ");
     setEnteredRoom(true)
 
   }
@@ -21,6 +26,9 @@ function RoomDetail() {
     setEnteredRoomDetails(event.target.value)
 
   }
+   
+
+
 
 
 
@@ -61,6 +69,8 @@ function RoomDetail() {
         <RoomJoinButtonAction enteredRoomDetails={enteredRoomDetails} enteredRoom={enteredRoom} enteredRoomChangeHandeler={enteredRoomChangeHandeler} />
 
       </div>
+
+
     </div>
   )
 }

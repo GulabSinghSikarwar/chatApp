@@ -19,9 +19,9 @@ function App() {
     // console.log(socket);
     dispatch(setSocket(socket))
 
-    console.log("effect");
+    // console.log("effect");
   }, [])
-  console.log("after");
+  // console.log("comp:");
 
   // }, [])
   return (
