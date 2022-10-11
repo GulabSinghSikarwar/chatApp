@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './component.module.css'
-import RoomJoinButtonAction from './userVideo/userVideo'
+import RoomJoinButtonAction from './userVideo/joinButtonAction'
 import { useParams, useLocation } from 'react-router-dom'
 import { Routes, Route, } from 'react-router-dom'
 import MeetingMainContainer from './Screens/MeetingMainContainer/MeetingMainContainer'
@@ -15,7 +15,7 @@ function RoomDetail() {
 
 
   const enteredRoomChangeHandeler = () => {
-    console.log(" entered boolean change called ");
+    console.log(" entered room  change called ");
     setEnteredRoom(true)
 
   }
