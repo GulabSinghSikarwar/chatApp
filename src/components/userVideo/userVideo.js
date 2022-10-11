@@ -1,22 +1,25 @@
 import React, { useRef, useState, useEffect } from 'react'
 
 import styles from './userVideo.module.css'
-import {useNavigate,useLocation} from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import RoomDetail from '../roomDetail'
- 
+import { useSelector } from 'react-redux'
 
 function RoomJoinButtonAction({ enteredRoomDetails, enteredRoom, enteredRoomChangeHandeler }) {
 
     const navigate = useNavigate()
     const location = useLocation()
-    const path=location.pathname;
-    
+    const path = location.pathname;
+    const socket = useSelector((state) => {
+        return state.socketSlice.socket;
+
+    })
 
 
 
 
 
-    
+
 
 
     const enterRoomActionHandeler = () => {
@@ -32,12 +35,12 @@ function RoomJoinButtonAction({ enteredRoomDetails, enteredRoom, enteredRoomChan
         }
         enteredRoomChangeHandeler()
 
-        console.log("path: ",path);
-        const newPath=`${path}/meet/${enteredRoomDetails}`
+        console.log("path: ", path);
+        const newPath = `${path}/meet/${enteredRoomDetails}`
 
         navigate(newPath)
 
-        
+
     }
 
 
@@ -49,7 +52,7 @@ function RoomJoinButtonAction({ enteredRoomDetails, enteredRoom, enteredRoomChan
             <div className={styles.userVideoInternelContainer}>
                 <div className={styles.buttonAndVideoContainer}>
                     <div className={styles.enterRoomButtonContainer}>
-                        <button onClick={enterRoomActionHandeler}  className={styles.enterRoomButton}>
+                        <button onClick={enterRoomActionHandeler} className={styles.enterRoomButton}>
                             Enter Room
                         </button>
 
